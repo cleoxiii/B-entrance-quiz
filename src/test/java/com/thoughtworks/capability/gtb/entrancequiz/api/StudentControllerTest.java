@@ -20,8 +20,7 @@ public class StudentControllerTest {
     @Test
     void should_get_student_list() throws Exception {
         mockMvc.perform(get("/student-list"))
-                .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].studentName", is("贠晨曦")))
+                .andExpect(jsonPath("$", hasSize(35)))
                 .andExpect(status().isOk());
     }
 }
